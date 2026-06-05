@@ -307,31 +307,6 @@
     </div>
   </section>
 
-  <!-- Sık Karşılaşılan Arızalar -->
-  <section class="section" id="arizalar">
-    <div class="container">
-      <div class="section__head">
-        <span class="eyebrow">Hızlı Talep</span>
-        <h2>Sık Karşılaşılan Arızalar</h2>
-        <p>Yaşadığınız soruna tıklayın; talep formu sizin için otomatik doldurulsun.</p>
-      </div>
-      <div class="ariza-chips">
-        <button type="button" class="chip" data-ariza="Kombi hiç çalışmıyor / yanmıyor">🔥 Kombi yanmıyor</button>
-        <button type="button" class="chip" data-ariza="Petekler / radyatörler ısınmıyor">🌡️ Petekler ısınmıyor</button>
-        <button type="button" class="chip" data-ariza="Musluktan sıcak su gelmiyor">🚿 Sıcak su yok</button>
-        <button type="button" class="chip" data-ariza="Kombi su basıncı düşük, sürekli su eklemek gerekiyor">📉 Su basıncı düşük</button>
-        <button type="button" class="chip" data-ariza="Kombi ekranında hata / arıza kodu var">⚠️ Arıza kodu veriyor</button>
-        <button type="button" class="chip" data-ariza="Kombiden su sızıyor / su kaçırıyor">💧 Su sızdırıyor</button>
-        <button type="button" class="chip" data-ariza="Kombi ses yapıyor (tıkırtı / gürültü)">🔊 Ses yapıyor</button>
-        <button type="button" class="chip" data-ariza="Kombi kendiliğinden sönüyor / kapanıyor">🔌 Kendiliğinden sönüyor</button>
-        <button type="button" class="chip" data-ariza="Petek temizliği (makineli) yaptırmak istiyorum">🧰 Petek temizliği</button>
-        <button type="button" class="chip" data-ariza="Periyodik kombi bakımı yaptırmak istiyorum">🛠️ Periyodik bakım</button>
-        <button type="button" class="chip" data-ariza="Kalorifer / petekler geç ısınıyor">🕐 Geç ısınıyor</button>
-        <button type="button" class="chip" data-ariza="Kombi revizyonu hakkında bilgi almak istiyorum">♻️ Kombi revizyonu</button>
-      </div>
-    </div>
-  </section>
-
   <!-- İletişim / Talep Formu -->
   <section class="section section--cta" id="iletisim">
     <div class="container contact">
@@ -342,9 +317,18 @@
         <ul class="contact__list">
           <li><span>📞</span> <a href="tel:+905357212190">0535 721 21 90</a></li>
           <li><span>💬</span> <a href="https://wa.me/905357212190" target="_blank" rel="noopener">WhatsApp ile yazın</a></li>
-          <li><span>📍</span> Osmangazi Mah. Aşıkpaşa Cad. 143/C Keçiören/Ankara</li>
+          <li><span>📍</span> <a href="#" id="addressLink" class="map-link">Osmangazi Mah. Aşıkpaşa Cad. 143/C Keçiören/Ankara</a></li>
           <li><span>🕐</span> Her gün 7/24 servis kaydı</li>
         </ul>
+
+        <a href="#" id="mapBtn" class="map-card" aria-label="Yol tarifi al">
+          <iframe
+            class="map-card__frame"
+            src="https://www.google.com/maps?q=Osmangazi%20Mahallesi%20A%C5%9F%C4%B1kpa%C5%9Fa%20Caddesi%20143%2FC%20Ke%C3%A7i%C3%B6ren%20Ankara&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Konum haritası" tabindex="-1"></iframe>
+          <span class="map-card__cta">📍 Yol Tarifi Al</span>
+        </a>
       </div>
 
       <form class="contact__form" id="talepForm">
@@ -374,11 +358,45 @@
         </div>
         <div class="field">
           <label for="marka">Kombi Markası</label>
-          <input type="text" id="marka" name="marka" placeholder="Örn. Vaillant, Bosch..." />
+          <select id="marka" name="marka" required>
+            <option value="">Seçiniz</option>
+            <option>Vaillant</option>
+            <option>DemirDöküm</option>
+            <option>Baymak</option>
+            <option>E.C.A.</option>
+            <option>Bosch</option>
+            <option>Buderus</option>
+            <option>Viessmann</option>
+            <option>Ariston</option>
+            <option>Ferroli</option>
+            <option>Protherm</option>
+            <option>Alarko</option>
+            <option>Airfel</option>
+            <option>Diğer / Bilmiyorum</option>
+          </select>
         </div>
         <div class="field field--full">
-          <label for="aciklama">Arıza / Talep Açıklaması</label>
-          <textarea id="aciklama" name="aciklama" rows="3" required placeholder="Kısaca arızayı veya talebinizi yazın"></textarea>
+          <label for="ariza">Arıza / Talep Türü</label>
+          <select id="ariza" name="ariza" required>
+            <option value="">Seçiniz</option>
+            <option>Kombi hiç çalışmıyor / yanmıyor</option>
+            <option>Petekler / radyatörler ısınmıyor</option>
+            <option>Musluktan sıcak su gelmiyor</option>
+            <option>Su basıncı düşük, sürekli su eklemek gerekiyor</option>
+            <option>Kombi ekranında hata / arıza kodu var</option>
+            <option>Kombiden su sızıyor / su kaçırıyor</option>
+            <option>Kombi ses yapıyor (tıkırtı / gürültü)</option>
+            <option>Kombi kendiliğinden sönüyor / kapanıyor</option>
+            <option>Kalorifer / petekler geç ısınıyor</option>
+            <option>Petek temizliği (makineli) istiyorum</option>
+            <option>Periyodik kombi bakımı istiyorum</option>
+            <option>Kombi revizyonu hakkında bilgi almak istiyorum</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+        <div class="field field--full">
+          <label for="aciklama">Eklemek İstedikleriniz <span class="field__opt">(opsiyonel)</span></label>
+          <textarea id="aciklama" name="aciklama" rows="2" placeholder="Varsa ek detay yazabilirsiniz"></textarea>
         </div>
         <div class="field field--full form__actions">
           <button type="submit" class="btn btn--whatsapp">

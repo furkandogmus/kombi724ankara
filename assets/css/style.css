@@ -137,12 +137,13 @@ h1,h2,h3{line-height:1.2;letter-spacing:-.02em}
 /* Placeholder for missing images */
 .img--placeholder{background:repeating-linear-gradient(45deg,#eef4f9,#eef4f9 12px,#e3edf5 12px,#e3edf5 24px);color:var(--muted)!important;display:grid;place-items:center;font-size:.82rem;font-weight:600;min-height:200px;padding:14px;text-align:center;border:2px dashed var(--blue)}
 
-/* Arıza chip'leri */
-.ariza-chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:920px;margin:0 auto}
-.chip{font-family:inherit;font-size:.95rem;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:30px;padding:12px 20px;cursor:pointer;transition:.18s;box-shadow:var(--shadow)}
-.chip:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
-.chip:active{transform:translateY(0)}
-.chip.is-selected{background:var(--blue);color:#fff;border-color:var(--blue)}
+/* Harita / yol tarifi */
+.map-link{color:#9ad0ff;border-bottom:1px dashed rgba(154,208,255,.5)}
+.map-link:hover{color:#fff}
+.map-card{position:relative;display:block;margin-top:22px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.15)}
+.map-card__frame{display:block;width:100%;height:220px;border:0;filter:grayscale(.1)}
+.map-card__cta{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(8,41,63,.92),rgba(8,41,63,0));color:#fff;font-weight:700;padding:26px 16px 12px;text-align:center;pointer-events:none}
+.map-card:hover .map-card__frame{filter:grayscale(0)}
 
 /* Review */
 .review__stars{color:#f5a623;letter-spacing:2px;margin-bottom:12px}
@@ -175,6 +176,7 @@ h1,h2,h3{line-height:1.2;letter-spacing:-.02em}
 .field{display:flex;flex-direction:column;gap:6px}
 .field--full{grid-column:1/-1}
 .field label{font-size:.85rem;font-weight:700;color:var(--navy)}
+.field__opt{font-weight:500;color:var(--muted)}
 .field input,.field select,.field textarea{padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:.96rem;color:var(--ink);background:#fbfdff;transition:.2s}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px var(--blue-light)}
 .form__actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}

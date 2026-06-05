@@ -28,17 +28,19 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 revealTargets.forEach(el => io.observe(el));
 
-// Hızlı arıza seçimi — chip'e tıklayınca formu doldur, forma kaydır
-const aciklamaInput = document.getElementById('aciklama');
-document.querySelectorAll('.chip').forEach((chip) => {
-  chip.addEventListener('click', () => {
-    document.querySelectorAll('.chip').forEach((c) => c.classList.remove('is-selected'));
-    chip.classList.add('is-selected');
-    aciklamaInput.value = chip.dataset.ariza;
-    document.getElementById('iletisim').scrollIntoView({ behavior: 'smooth' });
-    // Kaydırma bitince ad alanına odaklan
-    setTimeout(() => document.getElementById('ad').focus({ preventScroll: true }), 600);
-  });
+// Harita — cihaza göre Apple Haritalar (iOS) veya Google Haritalar
+const ADRES = 'Osmangazi Mahallesi Aşıkpaşa Caddesi 143/C Keçiören Ankara';
+const isIOS =
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const haritaURL = isIOS
+  ? `https://maps.apple.com/?q=${encodeURIComponent(ADRES)}`
+  : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADRES)}`;
+
+document.querySelectorAll('#mapBtn, #addressLink').forEach((el) => {
+  el.setAttribute('href', haritaURL);
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener');
 });
 
 // Talep formu — tüm talepler doğrudan WhatsApp'a yönlendirilir
@@ -56,13 +58,16 @@ form.addEventListener('submit', (e) => {
 
   const data = Object.fromEntries(new FormData(form).entries());
 
-  const mesaj =
+  let mesaj =
     `*Yeni Servis Talebi*\n` +
     `Ad: ${data.ad || '-'}\n` +
     `Telefon: ${data.telefon || '-'}\n` +
     `İlçe: ${data.ilce || '-'}\n` +
     `Marka: ${data.marka || '-'}\n` +
-    `Açıklama: ${data.aciklama || '-'}`;
+    `Arıza/Talep: ${data.ariza || '-'}`;
+  if (data.aciklama && data.aciklama.trim()) {
+    mesaj += `\nNot: ${data.aciklama.trim()}`;
+  }
 
   note.className = 'form__note ok';
   note.textContent = 'WhatsApp\'a yönlendiriliyorsunuz...';
