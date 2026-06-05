@@ -137,6 +137,13 @@ h1,h2,h3{line-height:1.2;letter-spacing:-.02em}
 /* Placeholder for missing images */
 .img--placeholder{background:repeating-linear-gradient(45deg,#eef4f9,#eef4f9 12px,#e3edf5 12px,#e3edf5 24px);color:var(--muted)!important;display:grid;place-items:center;font-size:.82rem;font-weight:600;min-height:200px;padding:14px;text-align:center;border:2px dashed var(--blue)}
 
+/* Arıza chip'leri */
+.ariza-chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:920px;margin:0 auto}
+.chip{font-family:inherit;font-size:.95rem;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:30px;padding:12px 20px;cursor:pointer;transition:.18s;box-shadow:var(--shadow)}
+.chip:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.chip:active{transform:translateY(0)}
+.chip.is-selected{background:var(--blue);color:#fff;border-color:var(--blue)}
+
 /* Review */
 .review__stars{color:#f5a623;letter-spacing:2px;margin-bottom:12px}
 .review p{font-style:italic;color:var(--ink)}

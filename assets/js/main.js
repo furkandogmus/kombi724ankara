@@ -28,6 +28,19 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 revealTargets.forEach(el => io.observe(el));
 
+// Hızlı arıza seçimi — chip'e tıklayınca formu doldur, forma kaydır
+const aciklamaInput = document.getElementById('aciklama');
+document.querySelectorAll('.chip').forEach((chip) => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.chip').forEach((c) => c.classList.remove('is-selected'));
+    chip.classList.add('is-selected');
+    aciklamaInput.value = chip.dataset.ariza;
+    document.getElementById('iletisim').scrollIntoView({ behavior: 'smooth' });
+    // Kaydırma bitince ad alanına odaklan
+    setTimeout(() => document.getElementById('ad').focus({ preventScroll: true }), 600);
+  });
+});
+
 // Talep formu — tüm talepler doğrudan WhatsApp'a yönlendirilir
 const form = document.getElementById('talepForm');
 const note = document.getElementById('formNote');
