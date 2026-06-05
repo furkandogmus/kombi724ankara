@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kombi724ankara.com/sitemap.xml
