@@ -1,0 +1,18 @@
+{
+  "name": "Kombi 7/24 Ankara",
+  "short_name": "Kombi 7/24",
+  "description": "Ankara genelinde profesyonel kombi teknik hizmeti",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#071b42",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
