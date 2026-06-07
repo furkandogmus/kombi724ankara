@@ -41,12 +41,13 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
     <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18m-6 4-4 4-2-2"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2c.5 3-1.8 4.6-3.2 6.3C7.2 10 6 11.7 6 14a6 6 0 0 0 12 0c0-2.4-1.3-4.2-2.5-6-.6.9-1.3 1.6-2.3 1.8C14.4 7 14 4.3 12 2Z"/><path d="M12 21a3 3 0 0 1-3-3c0-1.5 1.2-2.6 2-3.6.4 1 1 1.6 1.8 1.9.7-.3 1-.9 1.2-1.6.6.9 1 1.8 1 3.3a3 3 0 0 1-3 3Z"/></symbol>
   </svg>
 
   <header class="header" id="header">
     <div class="shell header__inner">
       <a class="brand" href="#anasayfa" aria-label="Kombi 7/24 Ankara">
-        <span class="brand__flame">♨</span>
+        <span class="brand__flame"><svg><use href="#i-flame"/></svg></span>
         <span><b>Kombi <em>7/24</em> Ankara</b><small>Profesyonel Kombi Teknik Hizmeti</small></span>
       </a>
       <nav class="nav" id="nav">
@@ -121,6 +122,7 @@
       <div class="shell">
         <div class="section-head"><span class="pill">Servis Fotoğraflarımız</span><h2>Gerçek Çalışmalarımızdan Kareler</h2><p>Ankara genelinde gerçekleştirdiğimiz kombi bakım ve teknik çalışmalarından fotoğraflar.</p></div>
         <div class="gallery"><img src="images/gercek-3.jpg" alt="Kombi ölçüm ve bakım çalışması" loading="lazy"><img src="images/gercek-4.jpg" alt="Açık kombi iç aksamı" loading="lazy"><img src="images/gercek-5.jpg" alt="Kombi brülör ve iç aksamı" loading="lazy"><img src="images/gercek-6.jpg" alt="Kombi bakım çalışması" loading="lazy"></div>
+        <img class="gallery-wide" src="images/petek-temizligi.png" alt="Makineli petek temizliği çalışması" loading="lazy">
       </div>
     </section>
 
@@ -131,8 +133,9 @@
           <label>Ad Soyad<input name="ad" placeholder="Adınız Soyadınız" required></label>
           <label>Telefon<input name="telefon" type="tel" placeholder="05XX XXX XX XX" required></label>
           <label>İlçe<select name="ilce" required><option value="">Seçiniz</option><option>Çankaya</option><option>Keçiören</option><option>Altındağ</option><option>Etimesgut</option><option>Gölbaşı</option><option>Mamak</option><option>Pursaklar</option><option>Sincan</option><option>Yenimahalle</option></select></label>
-          <label>Kombi Markası<select name="marka" required><option value="">Seçiniz</option><option>Vaillant</option><option>DemirDöküm</option><option>Baymak</option><option>E.C.A.</option><option>Bosch</option><option>Buderus</option><option>Diğer</option></select></label>
-          <label>Arıza / Talep Türü<select name="ariza" required><option value="">Seçiniz</option><option>Kombi Tamiratı</option><option>Kombi Bakımı</option><option>Petek Temizliği</option><option>Parça Değişimi</option><option>Diğer</option></select></label>
+          <label>Adres<textarea name="adres" rows="2" placeholder="Mahalle, cadde/sokak, bina ve daire no" required></textarea></label>
+          <label>Kombi Markası<select name="marka" required><option value="">Seçiniz</option><option>DemirDöküm</option><option>Vaillant</option><option>Baymak</option><option>Bosch</option><option>Buderus</option><option>E.C.A.</option><option>Viessmann</option><option>Ariston</option><option>Airfel</option><option>Protherm</option><option>Ferroli</option><option>Daikin</option><option>Alarko</option><option>Diğer</option></select></label>
+          <label>Arıza / Talep Türü<select name="ariza" required><option value="">Seçiniz</option><option>Kombi Yıllık Bakımı</option><option>Kombi Tamiri / Onarım</option><option>Kombi Arızası</option><option>Acil Kombi Servisi</option><option>Kombi Revizyonu</option><option>Petek Temizliği</option><option>Kombi Arıza Tespiti</option><option>Parça Değişimi</option><option>Genel Servis Talebi</option><option>Kombi hiç çalışmıyor / yanmıyor</option><option>Kombi ateşleme yapmıyor</option><option>Musluktan sıcak su gelmiyor</option><option>Petekler / radyatörler ısınmıyor</option><option>Kalorifer / petekler geç ısınıyor</option><option>Kombi su akıtıyor / su kaçırıyor</option><option>Kombi basıncı düşüyor</option><option>Sürekli kombiye su eklemek gerekiyor</option><option>Kombi basıncı yükseliyor</option><option>Kombi ekranında hata / arıza kodu var</option><option>Kombi ses yapıyor / gürültülü çalışıyor</option><option>Kombi kendiliğinden sönüyor / kapanıyor</option><option>Kombi reset istiyor</option><option>Kombi suyu az ısıtıyor</option><option>Kombi fazla ısıtıyor</option><option>Diğer / Emin Değilim</option></select></label>
           <label>Eklemek İstedikleriniz <small>(opsiyonel)</small><textarea name="aciklama" rows="3" placeholder="Varsa ek detay yazabilirsiniz"></textarea></label>
           <button type="submit">✆ WhatsApp ile Gönder</button><p id="formNote" class="form-note">🔒 WhatsApp’a yönlendirileceksiniz.</p>
         </form>
@@ -149,8 +152,12 @@
     </section>
   </main>
 
-  <footer><div class="shell"><a class="brand" href="#anasayfa"><span class="brand__flame">♨</span><span><b>Kombi <em>7/24</em> Ankara</b><small>Profesyonel Kombi Teknik Hizmeti</small></span></a><p>© <span id="year"></span> Kombi 7/24 Ankara. Tüm hakları saklıdır.</p></div></footer>
-  <a class="float-wa" href="https://wa.me/905357212190?text=Merhaba%2C%20kombi%20hizmeti%20almak%20istiyorum." aria-label="WhatsApp ile yaz" target="_blank" rel="noopener">✆</a>
+  <footer><div class="shell"><a class="brand" href="#anasayfa"><span class="brand__flame"><svg><use href="#i-flame"/></svg></span><span><b>Kombi <em>7/24</em> Ankara</b><small>Profesyonel Kombi Teknik Hizmeti</small></span></a><p>© <span id="year"></span> Kombi 7/24 Ankara. Tüm hakları saklıdır.</p></div></footer>
+  <div class="float-stack" aria-label="Hızlı iletişim">
+    <a class="fab fab--call" href="tel:+905357212190" aria-label="Telefon et"><svg><use href="#i-phone"/></svg><span class="fab__label">Telefon Et</span></a>
+    <a class="fab fab--record" href="#kayit" aria-label="Servis kaydı aç"><svg><use href="#i-calendar"/></svg><span class="fab__label">Servis Kaydı Aç</span></a>
+    <a class="fab fab--wa" href="https://wa.me/905357212190?text=Merhaba%2C%20kombi%20hizmeti%20almak%20istiyorum." aria-label="WhatsApp ile yaz" target="_blank" rel="noopener">✆<span class="fab__label">WhatsApp</span></a>
+  </div>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

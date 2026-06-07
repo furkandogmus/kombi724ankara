@@ -25,7 +25,7 @@ document.getElementById('talepForm').addEventListener('submit', (event) => {
   const form = event.currentTarget;
   if (!form.checkValidity()) return form.reportValidity();
   const data = Object.fromEntries(new FormData(form));
-  const message = `Yeni Servis Talebi\nAd Soyad: ${data.ad}\nTelefon: ${data.telefon}\nİlçe: ${data.ilce}\nMarka: ${data.marka}\nTalep: ${data.ariza}\nNot: ${data.aciklama || '-'}`;
+  const message = `Yeni Servis Talebi\nAd Soyad: ${data.ad}\nTelefon: ${data.telefon}\nİlçe: ${data.ilce}\nAdres: ${data.adres}\nMarka: ${data.marka}\nTalep: ${data.ariza}\nNot: ${data.aciklama || '-'}`;
   window.open(`https://wa.me/905357212190?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
 });
 
