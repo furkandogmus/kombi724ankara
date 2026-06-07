@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/enhancements.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kombi 7/24 Ankara">
   <meta property="og:description" content="Ankara genelinde profesyonel kombi teknik hizmeti.">
@@ -87,11 +88,21 @@
           <article><b>⚙</b><span><h3>Parça Değişimi</h3><p>Uygun parçalarla hızlı değişim yapılarak ihtiyaca uygun çözümler sunulur.</p></span><svg><use href="#i-chevron"/></svg></article>
           <article class="service-emergency"><b>🚨</b><span><h3>7/24 Acil Kombi Hizmeti</h3><p>Gece gündüz acil arıza durumlarında hızlı servis kaydı ve yönlendirme yapılır.</p></span><svg><use href="#i-chevron"/></svg></article>
         </div>
-        <a class="service-record-cta" href="#kayit">
-          <span class="service-record-cta__icon"><svg><use href="#i-calendar"/></svg></span>
-          <span><small>Online kayıt oluşturun</small><strong>Servis Kaydı Aç</strong><em>Bilgilerinizi bırakın, size en kısa sürede dönüş yapalım.</em></span>
-          <svg class="chev"><use href="#i-chevron"/></svg>
-        </a>
+        <div class="service-form-wrap" id="kayit">
+          <div class="form-layout">
+            <div class="section-head"><span class="pill">▣ Online servis kayıt formu</span><h2>Servis Kaydı Aç</h2><p>Formu doldurun, size en kısa sürede dönüş yapalım ve talebinizi alalım.</p></div>
+            <form id="talepForm" class="form">
+              <label>Ad Soyad<input name="ad" placeholder="Adınız Soyadınız" required></label>
+              <label>Telefon<input name="telefon" type="tel" placeholder="05XX XXX XX XX" required></label>
+              <label>İlçe<select name="ilce" required><option value="">Seçiniz</option><option>Çankaya</option><option>Keçiören</option><option>Altındağ</option><option>Etimesgut</option><option>Gölbaşı</option><option>Mamak</option><option>Pursaklar</option><option>Sincan</option><option>Yenimahalle</option></select></label>
+              <label>Adres<textarea name="adres" rows="2" placeholder="Mahalle, cadde/sokak, bina ve daire no" required></textarea></label>
+              <label>Kombi Markası<select name="marka" required><option value="">Seçiniz</option><option>DemirDöküm</option><option>Vaillant</option><option>Baymak</option><option>Bosch</option><option>Buderus</option><option>E.C.A.</option><option>Viessmann</option><option>Ariston</option><option>Airfel</option><option>Protherm</option><option>Ferroli</option><option>Daikin</option><option>Alarko</option><option>Diğer</option></select></label>
+              <label>Arıza / Talep Türü<select name="ariza" required><option value="">Seçiniz</option><option>Kombi Yıllık Bakımı</option><option>Kombi Tamiri / Onarım</option><option>Kombi Arızası</option><option>Acil Kombi Servisi</option><option>Kombi Revizyonu</option><option>Petek Temizliği</option><option>Kombi Arıza Tespiti</option><option>Parça Değişimi</option><option>Genel Servis Talebi</option><option>Kombi hiç çalışmıyor / yanmıyor</option><option>Kombi ateşleme yapmıyor</option><option>Musluktan sıcak su gelmiyor</option><option>Petekler / radyatörler ısınmıyor</option><option>Kalorifer / petekler geç ısınıyor</option><option>Kombi su akıtıyor / su kaçırıyor</option><option>Kombi basıncı düşüyor</option><option>Sürekli kombiye su eklemek gerekiyor</option><option>Kombi basıncı yükseliyor</option><option>Kombi ekranında hata / arıza kodu var</option><option>Kombi ses yapıyor / gürültülü çalışıyor</option><option>Kombi kendiliğinden sönüyor / kapanıyor</option><option>Kombi reset istiyor</option><option>Kombi suyu az ısıtıyor</option><option>Kombi fazla ısıtıyor</option><option>Diğer / Emin Değilim</option></select></label>
+              <label>Eklemek İstedikleriniz <small>(opsiyonel)</small><textarea name="aciklama" rows="3" placeholder="Varsa ek detay yazabilirsiniz"></textarea></label>
+              <button type="submit">✆ WhatsApp ile Gönder</button><p id="formNote" class="form-note">🔒 WhatsApp’a yönlendirileceksiniz.</p>
+            </form>
+          </div>
+        </div>
         <div class="quality-grid quality-grid--lower">
           <article><b>👨‍🔧</b><strong>Deneyimli Teknik Ekip</strong><p>Uzman kadro ile profesyonel hizmet</p></article>
           <article><b>↻</b><strong>7/24 Kesintisiz Hizmet</strong><p>Her gün, günün her saati yanınızdayız</p></article>
@@ -128,22 +139,6 @@
         <div class="section-head"><span class="pill">Servis Fotoğraflarımız</span><h2>Gerçek Çalışmalarımızdan Kareler</h2><p>Ankara genelinde gerçekleştirdiğimiz kombi bakım ve teknik çalışmalarından fotoğraflar.</p></div>
         <div class="gallery"><img src="images/gercek-3.jpg" alt="Kombi ölçüm ve bakım çalışması" loading="lazy"><img src="images/gercek-4.jpg" alt="Açık kombi iç aksamı" loading="lazy"><img src="images/gercek-5.jpg" alt="Kombi brülör ve iç aksamı" loading="lazy"><img src="images/gercek-6.jpg" alt="Kombi bakım çalışması" loading="lazy"></div>
         <img class="gallery-wide" src="images/petek-temizligi.png" alt="Makineli petek temizliği çalışması" loading="lazy">
-      </div>
-    </section>
-
-    <section class="section" id="kayit">
-      <div class="shell form-layout">
-        <div class="section-head"><span class="pill">▣ Online servis kayıt formu</span><h2>Servis Kaydı Aç</h2><p>Formu doldurun, size en kısa sürede dönüş yapalım ve talebinizi alalım.</p></div>
-        <form id="talepForm" class="form">
-          <label>Ad Soyad<input name="ad" placeholder="Adınız Soyadınız" required></label>
-          <label>Telefon<input name="telefon" type="tel" placeholder="05XX XXX XX XX" required></label>
-          <label>İlçe<select name="ilce" required><option value="">Seçiniz</option><option>Çankaya</option><option>Keçiören</option><option>Altındağ</option><option>Etimesgut</option><option>Gölbaşı</option><option>Mamak</option><option>Pursaklar</option><option>Sincan</option><option>Yenimahalle</option></select></label>
-          <label>Adres<textarea name="adres" rows="2" placeholder="Mahalle, cadde/sokak, bina ve daire no" required></textarea></label>
-          <label>Kombi Markası<select name="marka" required><option value="">Seçiniz</option><option>DemirDöküm</option><option>Vaillant</option><option>Baymak</option><option>Bosch</option><option>Buderus</option><option>E.C.A.</option><option>Viessmann</option><option>Ariston</option><option>Airfel</option><option>Protherm</option><option>Ferroli</option><option>Daikin</option><option>Alarko</option><option>Diğer</option></select></label>
-          <label>Arıza / Talep Türü<select name="ariza" required><option value="">Seçiniz</option><option>Kombi Yıllık Bakımı</option><option>Kombi Tamiri / Onarım</option><option>Kombi Arızası</option><option>Acil Kombi Servisi</option><option>Kombi Revizyonu</option><option>Petek Temizliği</option><option>Kombi Arıza Tespiti</option><option>Parça Değişimi</option><option>Genel Servis Talebi</option><option>Kombi hiç çalışmıyor / yanmıyor</option><option>Kombi ateşleme yapmıyor</option><option>Musluktan sıcak su gelmiyor</option><option>Petekler / radyatörler ısınmıyor</option><option>Kalorifer / petekler geç ısınıyor</option><option>Kombi su akıtıyor / su kaçırıyor</option><option>Kombi basıncı düşüyor</option><option>Sürekli kombiye su eklemek gerekiyor</option><option>Kombi basıncı yükseliyor</option><option>Kombi ekranında hata / arıza kodu var</option><option>Kombi ses yapıyor / gürültülü çalışıyor</option><option>Kombi kendiliğinden sönüyor / kapanıyor</option><option>Kombi reset istiyor</option><option>Kombi suyu az ısıtıyor</option><option>Kombi fazla ısıtıyor</option><option>Diğer / Emin Değilim</option></select></label>
-          <label>Eklemek İstedikleriniz <small>(opsiyonel)</small><textarea name="aciklama" rows="3" placeholder="Varsa ek detay yazabilirsiniz"></textarea></label>
-          <button type="submit">✆ WhatsApp ile Gönder</button><p id="formNote" class="form-note">🔒 WhatsApp’a yönlendirileceksiniz.</p>
-        </form>
       </div>
     </section>
 

@@ -1,9 +1,10 @@
-const CACHE = 'kombi724-v2';
+const CACHE = 'kombi724-v4';
 const ASSETS = [
   '/',
   '/index.html',
   '/manifest.webmanifest',
   '/assets/css/style.css',
+  '/assets/css/enhancements.css',
   '/assets/js/main.js',
   '/images/favicon.svg',
   '/images/gercek-2.jpg',
