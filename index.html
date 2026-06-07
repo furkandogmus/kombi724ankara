@@ -42,6 +42,7 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
     <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18m-6 4-4 4-2-2"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7c1.8 1 3.8 1.5 5.8 1.5 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.8c-1.8 0-3.5-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.4 4.6Zm5.4-7.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-1-2.4c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z" fill="currentColor"/></symbol>
     <symbol id="i-flame" viewBox="0 0 32 32"><path d="M16 2c-1 4 1.5 6.5 3.6 9 2.1 2.5 3.9 5 3.9 8.4A7.5 7.5 0 0 1 8.5 19c0-2.1.8-3.8 2-5.3.3 1.2 1 2.1 2.2 2.5-1.1-3.4.4-7 3.3-9.7 0 1.6.7 2.6 1.9 3.2C18.6 7.3 17.6 4.2 16 2Z" fill="currentColor"/><path d="M16 14.5c1.7 1.8 2.8 3.4 2.8 5.3a3.3 3.3 0 0 1-6.6 0c0-1.1.5-2 1.2-2.9.2.8.6 1.3 1.3 1.6-.5-1.6.3-3.2 1.3-4Z" fill="#fff" opacity=".22"/></symbol>
   </svg>
 
@@ -72,7 +73,7 @@
       </div>
       <div class="shell action-stack">
         <a class="action action--call" href="tel:+905357212190"><span class="action__icon"><svg><use href="#i-phone"/></svg></span><span><small>Hemen ara</small><strong>0535 721 21 90</strong><em>7/24 Teknik Destek Hattı</em></span><svg class="chev"><use href="#i-chevron"/></svg></a>
-        <a class="action action--wa" href="https://wa.me/905357212190?text=Merhaba%2C%20kombi%20hizmeti%20almak%20istiyorum." target="_blank" rel="noopener"><span class="action__icon">✆</span><span><strong>WhatsApp’tan Yaz</strong><small>Hemen WhatsApp ile iletişime geçin</small></span><svg class="chev"><use href="#i-chevron"/></svg></a>
+        <a class="action action--wa" href="https://wa.me/905357212190?text=Merhaba%2C%20kombi%20hizmeti%20almak%20istiyorum." target="_blank" rel="noopener"><span class="action__icon"><svg class="wa-icon"><use href="#i-whatsapp"/></svg></span><span><strong>WhatsApp’tan Yaz</strong><small>Hemen WhatsApp ile iletişime geçin</small></span><svg class="chev"><use href="#i-chevron"/></svg></a>
         <a class="action action--record" href="#kayit"><span class="action__icon"><svg><use href="#i-calendar"/></svg></span><span><strong>Servis Kaydı Aç</strong><small>Online servis kaydı oluşturun</small></span><svg class="chev"><use href="#i-chevron"/></svg></a>
       </div>
     </section>
@@ -99,7 +100,7 @@
               <label>Kombi Markası<select name="marka" required><option value="">Seçiniz</option><option>DemirDöküm</option><option>Vaillant</option><option>Baymak</option><option>Bosch</option><option>Buderus</option><option>E.C.A.</option><option>Viessmann</option><option>Ariston</option><option>Airfel</option><option>Protherm</option><option>Ferroli</option><option>Daikin</option><option>Alarko</option><option>Diğer</option></select></label>
               <label>Arıza / Talep Türü<select name="ariza" required><option value="">Seçiniz</option><option>Kombi Yıllık Bakımı</option><option>Kombi Tamiri / Onarım</option><option>Kombi Arızası</option><option>Acil Kombi Servisi</option><option>Kombi Revizyonu</option><option>Petek Temizliği</option><option>Kombi Arıza Tespiti</option><option>Parça Değişimi</option><option>Genel Servis Talebi</option><option>Kombi hiç çalışmıyor / yanmıyor</option><option>Kombi ateşleme yapmıyor</option><option>Musluktan sıcak su gelmiyor</option><option>Petekler / radyatörler ısınmıyor</option><option>Kalorifer / petekler geç ısınıyor</option><option>Kombi su akıtıyor / su kaçırıyor</option><option>Kombi basıncı düşüyor</option><option>Sürekli kombiye su eklemek gerekiyor</option><option>Kombi basıncı yükseliyor</option><option>Kombi ekranında hata / arıza kodu var</option><option>Kombi ses yapıyor / gürültülü çalışıyor</option><option>Kombi kendiliğinden sönüyor / kapanıyor</option><option>Kombi reset istiyor</option><option>Kombi suyu az ısıtıyor</option><option>Kombi fazla ısıtıyor</option><option>Diğer / Emin Değilim</option></select></label>
               <label>Eklemek İstedikleriniz <small>(opsiyonel)</small><textarea name="aciklama" rows="3" placeholder="Varsa ek detay yazabilirsiniz"></textarea></label>
-              <button type="submit">✆ WhatsApp ile Gönder</button><p id="formNote" class="form-note">🔒 WhatsApp’a yönlendirileceksiniz.</p>
+              <button type="submit"><svg class="wa-icon"><use href="#i-whatsapp"/></svg>WhatsApp ile Gönder</button><p id="formNote" class="form-note">🔒 WhatsApp’a yönlendirileceksiniz.</p>
             </form>
           </div>
         </div>
@@ -145,7 +146,7 @@
     <section class="section section--soft" id="konum">
       <div class="shell location">
         <div class="section-head"><span class="pill"><svg><use href="#i-pin"/></svg>Konum / Google Haritalar</span><h2>Konum Bilgilerimiz</h2><p>Kombi servis kaydınızı 7/24 oluşturabilir, aşağıdaki adresimizden bize ulaşabilirsiniz.</p></div>
-        <a class="address" id="addressLink" href="#"><span><svg><use href="#i-pin"/></svg></span><strong>Osmangazi Mahallesi Aşıkpaşa Caddesi 143B, Keçiören / Ankara</strong></a>
+        <a class="address" id="addressLink" href="#"><span><svg><use href="#i-pin"/></svg></span><strong>Osmangazi Mahallesi Aşıkpaşa Caddesi 143C, Keçiören / Ankara</strong></a>
         <div class="map-card"><iframe title="Kombi 7/24 Ankara konumu" loading="lazy" src="https://maps.google.com/maps?q=40.0120191,32.8632945&z=18&ie=UTF8&iwloc=&output=embed"></iframe></div>
         <div class="map-actions"><a id="mapBtn" href="#">⌖ Google Haritalar’da Aç</a><a href="tel:+905357212190">☎ 0535 721 21 90</a></div>
       </div>
@@ -156,7 +157,7 @@
   <div class="float-stack" aria-label="Hızlı iletişim">
     <a class="fab fab--call" href="tel:+905357212190" aria-label="Telefon et"><svg><use href="#i-phone"/></svg><span class="fab__label">Telefon Et</span></a>
     <a class="fab fab--record" href="#kayit" aria-label="Servis kaydı aç"><svg><use href="#i-calendar"/></svg><span class="fab__label">Servis Kaydı Aç</span></a>
-    <a class="fab fab--wa" href="https://wa.me/905357212190?text=Merhaba%2C%20kombi%20hizmeti%20almak%20istiyorum." aria-label="WhatsApp ile yaz" target="_blank" rel="noopener">✆<span class="fab__label">WhatsApp</span></a>
+    <a class="fab fab--wa" href="https://wa.me/905357212190?text=Merhaba%2C%20kombi%20hizmeti%20almak%20istiyorum." aria-label="WhatsApp ile yaz" target="_blank" rel="noopener"><svg class="wa-icon"><use href="#i-whatsapp"/></svg><span class="fab__label">WhatsApp</span></a>
   </div>
   <script src="assets/js/main.js"></script>
 </body>

@@ -3,6 +3,37 @@
   background: var(--navy);
 }
 
+.wa-icon {
+  fill: currentColor !important;
+  stroke: none !important;
+}
+
+.action--wa .action__icon {
+  background: rgba(255, 255, 255, .2);
+}
+
+.action--wa .action__icon .wa-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form button .wa-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.fab--wa .wa-icon {
+  width: 30px;
+  height: 30px;
+}
+
 .service-form-wrap {
   margin-top: 36px;
   padding: 34px;

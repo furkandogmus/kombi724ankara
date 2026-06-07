@@ -1,4 +1,4 @@
-const CACHE = 'kombi724-v5';
+const CACHE = 'kombi724-v6';
 const ASSETS = [
   '/',
   '/index.html',
