@@ -1,3 +1,8 @@
+.brand__flame {
+  padding: 8px;
+  background: var(--navy);
+}
+
 .service-form-wrap {
   margin-top: 36px;
   padding: 34px;

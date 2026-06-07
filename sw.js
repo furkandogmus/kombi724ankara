@@ -1,4 +1,4 @@
-const CACHE = 'kombi724-v4';
+const CACHE = 'kombi724-v5';
 const ASSETS = [
   '/',
   '/index.html',
@@ -7,6 +7,8 @@ const ASSETS = [
   '/assets/css/enhancements.css',
   '/assets/js/main.js',
   '/images/favicon.svg',
+  '/images/logo-alev.png',
+  '/images/app-icon.png',
   '/images/gercek-2.jpg',
   '/images/gercek-3.jpg',
   '/images/gercek-4.jpg',
