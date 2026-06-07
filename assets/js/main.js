@@ -12,7 +12,7 @@ nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () =>
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const address = 'Osmangazi Mahallesi Aşıkpaşa Caddesi 143/C Keçiören Ankara';
+const address = 'Osmangazi Mahallesi Aşıkpaşa Caddesi 143B Keçiören Ankara';
 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 document.querySelectorAll('#mapBtn, #addressLink').forEach((link) => {
   link.href = mapUrl;
