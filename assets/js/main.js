@@ -12,7 +12,7 @@ nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () =>
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const mapUrl = 'https://www.google.com/maps/place/Osmangazi,+A%C5%9F%C4%B1kpa%C5%9Fa+Cd.+143B,+06280+Ke%C3%A7i%C3%B6ren%2FAnkara/@40.0120191,32.8632945,19z/data=!4m6!3m5!1s0x14d34d22eaddf44f:0x7bac6d2dd65182fb!8m2!3d40.0120191!4d32.8632945';
+const mapUrl = 'https://maps.app.goo.gl/4jsDKbn8ioku2HZf9';
 document.querySelectorAll('#mapBtn, #addressLink').forEach((link) => {
   link.href = mapUrl;
   link.target = '_blank';
